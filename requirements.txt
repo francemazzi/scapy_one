@@ -1,0 +1,7 @@
+# Puoi aggiungere qui le tue dipendenze
+# Per esempio:
+# pandas==2.0.0
+# numpy==1.24.0
+fastapi==0.110.0
+uvicorn==0.27.1 
+scapy
