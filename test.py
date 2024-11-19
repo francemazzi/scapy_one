@@ -114,12 +114,11 @@ for device in devices:
         results = sniffer.sniff_packets(ip)
         
         if "active_connections" in results and results["active_connections"]:
-            # Raggruppa le connessioni per destinazione
             connections_by_dest = {}
             for conn in results["active_connections"]:
                 if '->' in conn['connection']:
                     src, dest = conn['connection'].split('->')
-                    dest = dest.strip().split(':')[0]  # Rimuovi la porta
+                    dest = dest.strip().split(':')[0]  
                     
                     if dest not in connections_by_dest:
                         connections_by_dest[dest] = []
